@@ -76,13 +76,19 @@ def split(wiki_name, experiment, threshold=0):
 
         # ... and create symlinks for all affected files
         for file in split_files:
-            os.symlink(path.join(path_inputs, file), path.join(split_path_inputs, file))
-            os.symlink(path.join(path_labels_concept_based, file), path.join(split_path_labels_concept_based, file))
-            os.symlink(path.join(path_labels_sentence_based, file), path.join(split_path_labels_sentence_based, file))
+            os.symlink(path.relpath(path.join(path_inputs, file), split_path_inputs),
+                       path.join(split_path_inputs, file))
+            os.symlink(path.relpath(path.join(path_labels_concept_based, file), split_path_labels_concept_based),
+                       path.join(split_path_labels_concept_based, file))
+            os.symlink(path.relpath(path.join(path_labels_sentence_based, file), split_path_labels_sentence_based),
+                       path.join(split_path_labels_sentence_based, file))
             fileid_ref = file[:-5] + ".1.txt"
-            os.symlink(path.join(path_human_abstracts, fileid_ref), path.join(split_path_human_abstracts, fileid_ref))
-            os.symlink(path.join(path_extractive_concept_based, fileid_ref), path.join(split_path_extractive_concept_based, fileid_ref))
-            os.symlink(path.join(path_extractive_sentence_based, fileid_ref), path.join(split_path_extractive_sentence_based, fileid_ref))
+            os.symlink(path.relpath(path.join(path_human_abstracts, fileid_ref), split_path_human_abstracts),
+                       path.join(split_path_human_abstracts, fileid_ref))
+            os.symlink(path.relpath(path.join(path_extractive_concept_based, fileid_ref), split_path_extractive_concept_based),
+                       path.join(split_path_extractive_concept_based, fileid_ref))
+            os.symlink(path.relpath(path.join(path_extractive_sentence_based, fileid_ref), split_path_extractive_sentence_based),
+                       path.join(split_path_extractive_sentence_based, fileid_ref))
 
     with open(path.join(path_experiment, f"{wiki_name}.split.{str(threshold)}.json"), 'w') as split_info_file:
         json.dump(split_info, split_info_file, indent=2)
