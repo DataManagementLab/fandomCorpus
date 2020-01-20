@@ -20,7 +20,7 @@ The code is published under a MIT License. If you are using the system for resea
 
 ### Data
 
-The data from the paper as well as a detailled description of the file formats will be published soon.
+[Dowload the data and read about its structure](data.md).
 
 
 ### Usage
