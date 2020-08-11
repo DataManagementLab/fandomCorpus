@@ -2,6 +2,8 @@
 title: Summarization Beyond News: The Automatically Acquired Fandom Corpora - Index
 ---
 
+## Summarization Beyond News: The Automatically Acquired Fandom Corpora
+
 The Fandom Corpus Framework and the corresponding sample Fandom Corpora were published at LREC 2020. [You can access the full paper in the ACL anthology.](https://www.aclweb.org/anthology/2020.lrec-1.827/)
 
 Fandom Corpus is a framework to create topic-specific multi-document summarization (mds) corpora. An overview over the pipeline can be found in the following figure:
