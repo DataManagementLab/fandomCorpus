@@ -1,5 +1,5 @@
-# fandomCorpus
+# Summarization Beyond News: The Automatically Acquired Fandom Corpora
 
 ![](docs/pipeline.png)
 
-Fandom Corpus is a framework to create topic-specific multi-document summariazation (mds) corpora. [More information](https://datamanagementlab.github.io/fandomCorpus/)
+This repositry contains the code for the LREC 2020 Paper "Summarization Beyond News: The Automatically Acquired Fandom Corpora" by Benjamin Hättasch et al. [More information](https://datamanagementlab.github.io/fandomCorpus/)
